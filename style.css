@@ -126,25 +126,32 @@
     height: 48px;
 }
 
-.content-box .popular-links {
+ .popular-links {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.content-box .popular-links span {
+.popular-links a:hover {
+    background-color: #fff;
+    color: #531f00 !important;
+}
+
+.popular-links span {
     display: block;
     width: 100%;
     margin-bottom: 10px;
 }
 
-.content-box .popular-links a {
+.popular-links a {
     color: white;
     padding: 10px 15px;
     border-radius: 20px;
     text-decoration: none;
     font-size: 14px;
     border: 2px solid white;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease ;
 }
 
 
