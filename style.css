@@ -1,6 +1,4 @@
-
-
-/* navbar */
+ /* navbar */
  .navbar-brand {
     font-weight: bold;
     color: #fff;
@@ -18,8 +16,6 @@
     color: white;
 }
 
-
-
 .btn-outline-light {
     border: 2px solid #fff;
     padding: 5px 10px;
@@ -35,33 +31,29 @@
     color: #000;
 }
 
-
 /* hero img */
-
 .hero-jenny {
     background-image: url('/images/jenny.jpg');
     background-size: cover;
-    /* background-position: center; */
+    background-position: center;
     height: 100vh;
 }
 
 .hero-jordan {
     background-image: url('/images/jordan.webp');
     background-size: cover;
-    /* background-position: center; */
+    background-position: center;
     height: 100vh;
 }
 
 .hero-colin {
     background-image: url('/images/colin.jpg');
     background-size: cover;
-    /* background-position: center; */
+    background-position: center;
     height: 100vh;
 }
 
-
 /* hero bg css */
-
 .hero-wrapper {
     position: relative;
     overflow: hidden;
@@ -90,19 +82,16 @@
     z-index: 2;
 }
 
-
 /* content box */
-
 .content-box {
     position: absolute;
     top: 30%;
     left: 4%;
-    /* transform: translateY(-50%); */
     z-index: 3;
     text-align: left;
     color: white;
-    width: 40%;
-    
+    width: 90%; /* Adjusted for smaller screens */
+    max-width: 500px;
 }
 
 .content-box label {
@@ -117,19 +106,39 @@
 }
 
 .content-box input[type="text"] {
-    /* width: 400px; */
     padding: 10px;
     font-size: 16px;
     border: none;
     border-radius: 4px 0 0 4px;
     margin-bottom: 20px;
     height: 48px;
+    flex-grow: 1;
 }
 
- .popular-links {
+.search-btn {
+    background-color: lightgreen;
+    border-radius: 0 4px 4px 0;
+    height: 48px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.popular-links {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+}
+
+.popular-links a {
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 14px;
+    border: 2px solid white;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .popular-links a:hover {
@@ -143,49 +152,21 @@
     margin-bottom: 10px;
 }
 
-.popular-links a {
-    color: white;
-    padding: 10px 15px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-size: 14px;
-    border: 2px solid white;
-    font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease ;
-}
-
-
-.search-btn{
-    background-color: lightgreen;
-    border-radius: 0 4px 4px 0;
-    height: 48px;
-    padding: 10px;
-}
-
-
-
-
-
-
 /* hero badge */
-
-.hero-badge-position{
+.hero-badge-position {
     display: flex;
     justify-content: end;
     align-items: end;
     height: 100%;
-    
 }
 
-.hero-badge{
+.hero-badge {
     position: relative;
-    border: 1px solid wheat; 
-    background: hsla(0, 0%, 100%, .14);
+    border: 1px solid wheat;
+    background: hsla(0, 0%, 100%, 0.14);
     padding: 12px 24px 12px 12px;
     border-radius: 1600px;
     backdrop-filter: blur(30px);
-    /* left: 75%; */
-    /* top: 80%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -193,14 +174,47 @@
     color: #fff;
     width: auto;
     height: 10%;
-    
 }
-
-
 
 .hero-badge img {
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .content-box {
+        width: 90%;
+        top: 25%;
+    }
+
+    .content-box label {
+        font-size: 24px;
+    }
+
+    .content-box input[type="text"],
+    .search-btn {
+        height: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .content-box {
+        width: 95%;
+        top: 20%;
+    }
+
+    .content-box label {
+        font-size: 20px;
+    }
+
+    .content-box input[type="text"],
+    .search-btn {
+        height: 36px;
+    }
+
+    .navbar-brand {
+        font-size: 24px;
+    }
 }
